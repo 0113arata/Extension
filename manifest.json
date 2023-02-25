@@ -1,0 +1,23 @@
+{
+  "name": "Page",
+  "description": "この拡張機能は、'https://0113arata.github.io/Page/'に対応した拡張機能です。",
+  "version": "1.1.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "Home.png",
+    "48": "Home.png",
+    "128": "Home.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["Google/script.js"],"css": ["Google/style.css"]
+    },
+
+    {
+      "matches": ["http://127.0.0.1:5500/*"],
+      "js": ["Page/script.js"],"css": ["Page/style.css"]
+    }
+  ]
+}
